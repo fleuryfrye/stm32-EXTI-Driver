@@ -14,6 +14,8 @@ typedef enum
 typedef void (*EXTI_Callback_t)(void);
 
 void initEXTI(GPIO_TypeDef *port, uint8_t pin);
+void deinitEXTI(GPIO_TypeDef *port, uint8_t pin);
 void EXTISetSource(GPIO_TypeDef *port, uint8_t pin, EXTI_INT_SOURCE_t source, EXTI_Callback_t callback);
+EXTI_Callback_t EXTIGetCallback(uint8_t pin);
 
 #endif /* EXTI_H */
