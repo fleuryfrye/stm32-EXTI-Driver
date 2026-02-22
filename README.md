@@ -9,7 +9,7 @@ Lightweight EXTI (external interrupt) helper for STM32F3 devices. It configures 
 
 ## Requirements
 - STM32F3 device headers (`stm32f3xx.h`) available in your include path.
-- HAL definitions for `__HAL_RCC_SYSCFG_CLK_ENABLE()`, `NVIC_EnableIRQ()`.
+- CMSIS definition for `NVIC_EnableIRQ()`.
 - EXTI line source mapping supports GPIOA, GPIOB, GPIOF.
 
 ## Quick Start

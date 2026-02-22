@@ -13,7 +13,7 @@ static EXTI_Callback_t EXTIGetCallback(uint8_t pin);
 
 void initEXTI(GPIO_TypeDef *port, uint8_t pin)
 {
-    __HAL_RCC_SYSCFG_CLK_ENABLE();
+    RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
 
     switch (pin)
     {
